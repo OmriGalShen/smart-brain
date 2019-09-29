@@ -5,9 +5,60 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); */
+  background: linear-gradient(
+    to left,
+    rgba(7, 27, 82, 1) 0%,
+    rgba(0, 128, 128, 1) 100%
+  );
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  cursor: pointer;
+}
+
+.formPattern {
+  /* background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%); */
+  /* background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 0.6817155756207676) 0%,
+    rgba(9, 9, 121, 0.6388261851015802) 35%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+  /* background-image: linear-gradient(
+    to left bottom,
+    #073985,
+    #0061aa,
+    #0089c7,
+    #00b0dc,
+    #12d8eb
+  ); */
+  /* background-image: linear-gradient(
+    to right top,
+    #4111f0,
+    #303ef7,
+    #2958fc,
+    #326dfd,
+    #4681fb,
+    #1995ff,
+    #00a6ff,
+    #13b6ff,
+    #00c9ff,
+    #00dbff,
+    #22ecfa,
+    #5ffbf1
+  ); */
+  background: rgb(10, 3, 126);
+  background: linear-gradient(
+    90deg,
+    rgba(10, 3, 126, 0.5) 0%,
+    rgba(9, 9, 121, 0.5) 35%,
+    rgba(0, 212, 255, 0.5) 100%
+  );
 }

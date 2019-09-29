@@ -1,0 +1,25 @@
+.form {
+  width: 700px;
+  /* background: radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px; */
+  background-image: linear-gradient(
+    to right top,
+    #4111f0,
+    #303ef7,
+    #2958fc,
+    #326dfd,
+    #4681fb,
+    #1995ff,
+    #00a6ff,
+    #13b6ff,
+    #00c9ff,
+    #00dbff,
+    #22ecfa,
+    #5ffbf1
+  );
+  padding-bottom: 20px;
+}
