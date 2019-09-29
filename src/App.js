@@ -5,17 +5,13 @@ import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import Particles from "react-particles-js";
-// import Clarifai from "clarifai";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Signin from "./containers/Signin/Signin";
 import Register from "./containers/Register/Register";
-
-const defaultImage =
-  // "https://www.goldennumber.net/wp-content/uploads/2013/08/florence-colgate-england-most-beautiful-face.jpg";
-  "https://www.thecharlestonphotographer.com/wp-content/uploads/2015/02/family-pictures-by-charleston-family-photographers-king-street-studios-37.jpg";
+import { DEFAULT_IMAGE, SERVER_URL } from "./constants";
 
 const initialState = {
-  input: defaultImage,
+  input: DEFAULT_IMAGE,
   imageUrl: "",
   faceBoxes: [],
   route: "signin",
@@ -67,7 +63,7 @@ class App extends React.Component {
     this.setState({
       imageUrl: this.state.input
     });
-    fetch("http://localhost:3000/imageurl", {
+    fetch(SERVER_URL + "/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ input: this.state.input })
@@ -75,7 +71,7 @@ class App extends React.Component {
       .then(respone => respone.json())
       .then(response => {
         if (response) {
-          fetch("http://localhost:3000/image", {
+          fetch(SERVER_URL + "/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ id: this.state.user.id })
